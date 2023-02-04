@@ -27,6 +27,7 @@ const UserInfo = () => {
         onPress={() => navigation.navigate("Notification")}
       >
         <Ionicons name="md-notifications-outline" size={24} color="black" />
+        <View style={styles.notificationIndicator} />
       </TouchableOpacity>
     </View>
   );
@@ -54,7 +55,15 @@ const styles = StyleSheet.create({
     borderRadius: APP_CONSTANTS.APP_BORDER_RADIUS,
     height: 40,
     width: 40,
-    // backgroundColor: "skyblue",
+    position: "relative",
+  },
+  notificationIndicator: {
+    height: 10,
+    width: 10,
+    backgroundColor: "red",
+    borderRadius: 10 / 2,
+    position: "absolute",
+    right: "40%",
   },
   userDetailContainer: {
     flexGrow: 1,
