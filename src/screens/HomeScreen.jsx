@@ -1,6 +1,7 @@
 import { StyleSheet, View } from "react-native";
 
 import QRSearch from "../components/home/QRSearch";
+import RecentShipping from "../components/home/RecentShipping";
 import UserInfo from "../components/home/UserInfo";
 
 const HomeScreen = () => {
@@ -8,6 +9,7 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <UserInfo />
       <QRSearch />
+      <RecentShipping />
     </View>
   );
 };
