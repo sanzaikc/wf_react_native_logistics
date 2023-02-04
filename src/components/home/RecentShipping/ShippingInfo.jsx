@@ -3,7 +3,7 @@ import { Entypo } from "@expo/vector-icons";
 
 import { APP_CONSTANTS } from "../../../common/constants";
 
-const ShippingInfo = ({}) => {
+const ShippingInfo = () => {
   return (
     <TouchableOpacity style={styles.container}>
       <View style={styles.header}>
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fbfbfb",
     padding: APP_CONSTANTS.APP_SPACING * 1.5,
     borderRadius: APP_CONSTANTS.APP_BORDER_RADIUS,
+    marginBottom: APP_CONSTANTS.APP_SPACING * 1.25,
   },
 
   header: {

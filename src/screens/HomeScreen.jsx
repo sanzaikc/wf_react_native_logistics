@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 
 import QRSearch from "../components/home/QRSearch";
 import RecentShipping from "../components/home/RecentShipping";
@@ -6,13 +6,13 @@ import UserInfo from "../components/home/UserInfo";
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <UserInfo />
 
       <QRSearch />
 
       <RecentShipping />
-    </View>
+    </ScrollView>
   );
 };
 

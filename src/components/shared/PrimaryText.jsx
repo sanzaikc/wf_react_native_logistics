@@ -11,6 +11,5 @@ const styles = StyleSheet.create({
   primary: {
     fontSize: 20,
     fontWeight: "500",
-    paddingBottom: APP_CONSTANTS.APP_SPACING,
   },
 });

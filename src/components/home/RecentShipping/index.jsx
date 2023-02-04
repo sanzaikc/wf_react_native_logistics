@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { APP_CONSTANTS } from "../../../common/constants";
 
@@ -8,9 +8,17 @@ import ShippingInfo from "./ShippingInfo";
 export default function RecentShipping() {
   return (
     <View style={styles.container}>
-      <PrimaryText>Recent Shipping!</PrimaryText>
+      <View style={styles.header}>
+        <PrimaryText>Recent Shipping!</PrimaryText>
 
-      <ShippingInfo />
+        <TouchableOpacity>
+          <Text style={styles.more}>View More</Text>
+        </TouchableOpacity>
+      </View>
+
+      {new Array(3).fill(null).map((_, index) => (
+        <ShippingInfo key={index} />
+      ))}
     </View>
   );
 }
@@ -18,5 +26,18 @@ export default function RecentShipping() {
 const styles = StyleSheet.create({
   container: {
     padding: APP_CONSTANTS.APP_SPACING,
+    rowGap: 2,
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingBottom: APP_CONSTANTS.APP_SPACING,
+  },
+  more: {
+    color: "gray",
+    fontSize: 12,
+    fontWeight: "500",
+    paddingHorizontal: APP_CONSTANTS.APP_SPACING * 0.25,
   },
 });
