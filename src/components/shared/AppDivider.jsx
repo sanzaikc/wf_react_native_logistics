@@ -1,4 +1,5 @@
 import { StyleSheet, View } from "react-native";
+
 import { APP_CONSTANTS } from "../../common/constants";
 
 const AppDivider = () => {
