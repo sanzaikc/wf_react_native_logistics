@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import { APP_CONSTANTS } from "../../common/constants";
@@ -6,7 +6,10 @@ import { APP_CONSTANTS } from "../../common/constants";
 const UserInfo = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.avatar}></View>
+      <Image
+        style={styles.avatar}
+        source={{ uri: "https://i.pravatar.cc/300" }}
+      />
 
       <View style={styles.userDetailContainer}>
         <Text style={styles.userName}>Hi, John Doe!</Text>
