@@ -9,6 +9,7 @@ const UserInfo = () => {
 
       <View style={styles.userDetailContainer}>
         <Text style={styles.userName}>Hi, John Doe!</Text>
+
         <Text style={styles.userSubtitle}>
           Lorem ipsum dolor sit amet consectetur.
         </Text>

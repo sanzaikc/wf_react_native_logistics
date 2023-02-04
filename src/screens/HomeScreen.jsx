@@ -8,7 +8,9 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <UserInfo />
+
       <QRSearch />
+
       <RecentShipping />
     </View>
   );

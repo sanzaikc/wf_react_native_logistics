@@ -9,6 +9,7 @@ export default function RecentShipping() {
   return (
     <View style={styles.container}>
       <PrimaryText>Recent Shipping!</PrimaryText>
+
       <ShippingInfo />
     </View>
   );

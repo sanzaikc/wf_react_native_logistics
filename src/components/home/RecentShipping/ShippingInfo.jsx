@@ -1,4 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
+import { Entypo } from "@expo/vector-icons";
+
 import { APP_CONSTANTS } from "../../../common/constants";
 
 const ShippingInfo = ({}) => {
@@ -14,7 +16,9 @@ const ShippingInfo = ({}) => {
           <Text style={styles.destinationDate}>20 Dec, 2022</Text>
           <Text style={styles.destinationAddress}>Kathmandu</Text>
         </View>
-        <Text>|</Text>
+
+        <Entypo name="chevron-thin-right" size={18} color="#c6c6c6" />
+
         <View style={[styles.destinationItem, styles.toDestination]}>
           <Text style={styles.destinationDate}>20 Dec, 2022</Text>
           <Text style={styles.destinationAddress}>Pokhara</Text>
