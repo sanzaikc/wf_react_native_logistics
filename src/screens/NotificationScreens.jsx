@@ -1,29 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import { APP_CONSTANTS } from "../common/constants";
+import GroupedNotifications from "../components/notification/GroupedNotifications";
 import NotificationItem from "../components/notification/NotificationItem";
+import AppDivider from "../components/shared/AppDivider";
 
 const NotificationScreens = () => {
-  const _thisWeek = [
-    {
-      regNo: "reg1021389020",
-      action: "Delivered",
-      address: "Satdobato, Yogikuti 5422.",
-      date: "2d",
-    },
-    {
-      regNo: "reg1021389020",
-      action: "Transit",
-      address: "Ringroad, Tribhuvan Airport.",
-      date: "2d",
-    },
-    {
-      regNo: "reg1021389020",
-      action: "Delivery",
-      address: "Tangal, Naxal.",
-      date: "2d",
-    },
-  ];
-
   const _today = [
     {
       regNo: "reg1021389020",
@@ -54,11 +35,38 @@ const NotificationScreens = () => {
     },
   ];
 
+  const _thisWeek = [
+    {
+      regNo: "reg1021389020",
+      action: "Delivered",
+      address: "Satdobato, Yogikuti 5422.",
+      date: "2d",
+    },
+    {
+      regNo: "reg1021389020",
+      action: "Transit",
+      address: "Ringroad, Tribhuvan Airport.",
+      date: "2d",
+    },
+    {
+      regNo: "reg1021389020",
+      action: "Delivery",
+      address: "Tangal, Naxal.",
+      date: "2d",
+    },
+  ];
+
   return (
     <View style={styles.container}>
-      {_today.map((el) => (
-        <NotificationItem notification={el} />
-      ))}
+      <GroupedNotifications groupLabel="Today" notifications={_today} />
+
+      <AppDivider />
+
+      <GroupedNotifications groupLabel="Yesterday" notifications={_yesterday} />
+
+      <AppDivider />
+
+      <GroupedNotifications groupLabel="This Week" notifications={_thisWeek} />
     </View>
   );
 };
