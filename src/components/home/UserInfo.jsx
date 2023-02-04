@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   notificationIndicator: {
-    height: 10,
-    width: 10,
+    height: 8,
+    width: 8,
     backgroundColor: "red",
     borderRadius: 10 / 2,
     position: "absolute",
-    right: "40%",
+    right: "30%",
   },
   userDetailContainer: {
     flexGrow: 1,
