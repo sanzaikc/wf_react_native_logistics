@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 import { APP_CONSTANTS } from "../../common/constants";
 
@@ -15,7 +16,9 @@ const UserInfo = () => {
         </Text>
       </View>
 
-      <View style={styles.notification}></View>
+      <TouchableOpacity style={styles.notification}>
+        <Ionicons name="md-notifications-outline" size={24} color="black" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -42,7 +45,7 @@ const styles = StyleSheet.create({
     borderRadius: APP_CONSTANTS.APP_BORDER_RADIUS,
     height: 40,
     width: 40,
-    backgroundColor: "skyblue",
+    // backgroundColor: "skyblue",
   },
   userDetailContainer: {
     flexGrow: 1,

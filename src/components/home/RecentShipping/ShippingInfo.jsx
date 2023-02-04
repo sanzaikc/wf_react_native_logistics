@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
 import { APP_CONSTANTS } from "../../../common/constants";
 
 const ShippingInfo = ({}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.regNo}>Reg123456789</Text>
         <Text style={styles.status}>Delivered</Text>
@@ -24,7 +24,7 @@ const ShippingInfo = ({}) => {
           <Text style={styles.destinationAddress}>Pokhara</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
