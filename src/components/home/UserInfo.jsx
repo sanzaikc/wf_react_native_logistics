@@ -24,7 +24,7 @@ const UserInfo = () => {
 
       <TouchableOpacity
         style={styles.notification}
-        onPress={() => navigation.navigate("Notifications")}
+        onPress={() => navigation.navigate("Notification")}
       >
         <Ionicons name="md-notifications-outline" size={24} color="black" />
       </TouchableOpacity>

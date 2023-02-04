@@ -15,7 +15,7 @@ export default function App() {
           component={HomeScreen}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Notifications" component={NotificationScreens} />
+        <Stack.Screen name="Notification" component={NotificationScreens} />
       </Stack.Navigator>
     </NavigationContainer>
   );
