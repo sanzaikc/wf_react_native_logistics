@@ -1,9 +1,12 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 import { APP_CONSTANTS } from "../../common/constants";
 
 const UserInfo = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Image
@@ -19,7 +22,10 @@ const UserInfo = () => {
         </Text>
       </View>
 
-      <TouchableOpacity style={styles.notification}>
+      <TouchableOpacity
+        style={styles.notification}
+        onPress={() => navigation.navigate("Notifications")}
+      >
         <Ionicons name="md-notifications-outline" size={24} color="black" />
       </TouchableOpacity>
     </View>
