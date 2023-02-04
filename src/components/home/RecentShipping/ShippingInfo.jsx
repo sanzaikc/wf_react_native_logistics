@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { APP_CONSTANTS } from "../../../common/constants";
 
-const ShippingInfo = () => {
+const ShippingInfo = ({}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -28,7 +28,7 @@ export default ShippingInfo;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "lightgray",
+    backgroundColor: "#fbfbfb",
     padding: APP_CONSTANTS.APP_SPACING * 1.5,
     borderRadius: APP_CONSTANTS.APP_BORDER_RADIUS,
   },
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
   regNo: {
     fontSize: 16,
     fontWeight: "500",
+    textTransform: "uppercase",
   },
   status: {
     backgroundColor: "#000",
@@ -66,7 +67,6 @@ const styles = StyleSheet.create({
   destinationAddress: {
     color: "gray",
     fontSize: 12,
-    fontWeight: "500",
   },
   toDestination: {
     alignItems: "flex-end",
