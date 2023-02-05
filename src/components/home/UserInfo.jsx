@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: APP_CONSTANTS.APP_SPACING,
   },
-
   avatar: {
     flexShrink: 0,
     borderRadius: APP_CONSTANTS.APP_BORDER_RADIUS,
@@ -71,6 +70,15 @@ const styles = StyleSheet.create({
     marginHorizontal: APP_CONSTANTS.APP_SPACING * 0.9,
     maxWidth: "100%",
   },
-  userName: { fontSize: 22, fontWeight: "500", marginTop: -5 },
-  userSubtitle: { fontSize: 12, color: "gray" },
+  userName: {
+    fontFamily: "Quicksand_700Bold",
+    fontSize: 22,
+    fontWeight: "500",
+    marginTop: -5,
+  },
+  userSubtitle: {
+    fontFamily: "Quicksand_400Regular",
+    fontSize: 12,
+    color: "gray",
+  },
 });

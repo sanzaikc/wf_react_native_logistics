@@ -45,13 +45,14 @@ const styles = StyleSheet.create({
     marginBottom: APP_CONSTANTS.APP_SPACING,
   },
   regNo: {
+    fontFamily: "Quicksand_700Bold",
     fontSize: 16,
-    fontWeight: "500",
     textTransform: "uppercase",
   },
   status: {
     backgroundColor: "#000",
     color: "#fff",
+    fontFamily: "Quicksand_400Regular",
     fontSize: 12,
     paddingHorizontal: APP_CONSTANTS.APP_SPACING,
     paddingVertical: APP_CONSTANTS.APP_SPACING * 0.25,
@@ -68,10 +69,12 @@ const styles = StyleSheet.create({
   destinationDate: {
     color: "gray",
     fontSize: 10,
+    fontFamily: "Quicksand_400Regular",
   },
   destinationAddress: {
     color: "gray",
     fontSize: 12,
+    fontFamily: "Quicksand_400Regular",
   },
   toDestination: {
     alignItems: "flex-end",

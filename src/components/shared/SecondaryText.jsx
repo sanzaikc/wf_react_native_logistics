@@ -7,8 +7,5 @@ const SecondaryText = ({ children }) => {
 export default SecondaryText;
 
 const styles = StyleSheet.create({
-  primary: {
-    fontSize: 18,
-    fontWeight: "500",
-  },
+  primary: { fontFamily: "Quicksand_700Bold", fontSize: 18, fontWeight: "500" },
 });

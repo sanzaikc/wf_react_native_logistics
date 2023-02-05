@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
   },
   more: {
     color: "gray",
+    fontFamily: "Quicksand_700Bold",
     fontSize: 12,
-    fontWeight: "500",
     paddingHorizontal: APP_CONSTANTS.APP_SPACING * 0.25,
   },
 });

@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
   },
   regNo: {
     color: "gray",
+    fontFamily: "Quicksand_400Regular",
     fontSize: 12,
     textTransform: "uppercase",
   },
@@ -31,11 +32,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "baseline",
   },
-  content: {
-    fontSize: 16,
-  },
+  content: { fontFamily: "Quicksand_400Regular", fontSize: 16 },
   action: {
-    fontWeight: "500",
+    fontFamily: "Quicksand_600SemiBold",
   },
   date: {
     fontSize: 12,
