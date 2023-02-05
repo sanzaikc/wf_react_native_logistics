@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
+
 import { APP_CONSTANTS } from "../common/constants";
-import GroupedNotifications from "../components/notification/GroupedNotifications";
-import NotificationItem from "../components/notification/NotificationItem";
+
 import AppDivider from "../components/shared/AppDivider";
+import GroupedNotifications from "../components/notification/GroupedNotifications";
 
 const NotificationScreens = () => {
   const _today = [
@@ -21,7 +22,7 @@ const NotificationScreens = () => {
     {
       regNo: "reg1021389020",
       action: "Arriving at",
-      address: "Iplex Mall Baneshwor, Remax Nepal 44123",
+      address: "Iplex Mall Baneshwor, Remax Nepal 44123.",
       date: "6h",
     },
   ];
