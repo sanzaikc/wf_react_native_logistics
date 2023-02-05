@@ -7,7 +7,7 @@ const NotificationItem = ({ notification }) => {
       <Text style={styles.regNo}>{notification.regNo}</Text>
       <View style={styles.contentContainer}>
         <Text style={styles.content}>
-          <Text style={styles.action}>{notification?.action} </Text>
+          <Text style={styles.action}>{notification?.action}</Text> at{" "}
           {notification.address}
           <Text style={styles.date}> {notification.date} </Text>
         </Text>
