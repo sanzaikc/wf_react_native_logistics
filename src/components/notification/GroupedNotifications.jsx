@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import { APP_CONSTANTS } from "../../common/constants";
+
 import NotificationItem from "./NotificationItem";
 import SecondaryText from "../shared/SecondaryText";
-import { APP_CONSTANTS } from "../../common/constants";
 
 const GroupedNotifications = ({ groupLabel = "Group", notifications }) => {
   return (
@@ -11,8 +12,8 @@ const GroupedNotifications = ({ groupLabel = "Group", notifications }) => {
         <SecondaryText>{groupLabel}</SecondaryText>
       </View>
 
-      {notifications.map((el) => (
-        <NotificationItem notification={el} />
+      {notifications.map((el, index) => (
+        <NotificationItem key={index} notification={el} />
       ))}
     </View>
   );
