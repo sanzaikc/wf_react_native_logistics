@@ -10,12 +10,14 @@ const ShippingInfo = () => {
     <TouchableOpacity style={styles.container}>
       <View style={styles.header}>
         <AppText style={styles.regNo}>Reg123456789</AppText>
+
         <AppText style={styles.status}>Delivered</AppText>
       </View>
 
       <View style={styles.destinations}>
         <View style={[styles.destinationItem]}>
           <AppText style={styles.destinationDate}>20 Dec, 2022</AppText>
+
           <AppText style={styles.destinationAddress}>Kathmandu</AppText>
         </View>
 
@@ -23,6 +25,7 @@ const ShippingInfo = () => {
 
         <View style={[styles.destinationItem, styles.toDestination]}>
           <AppText style={styles.destinationDate}>20 Dec, 2022</AppText>
+
           <AppText style={styles.destinationAddress}>Pokhara</AppText>
         </View>
       </View>
