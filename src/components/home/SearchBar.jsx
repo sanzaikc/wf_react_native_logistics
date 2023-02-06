@@ -1,17 +1,31 @@
-import { StyleSheet, TextInput, View } from "react-native";
+import React from "react";
+import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import { APP_CONSTANTS } from "../../common/constants";
 
 const SearchBar = () => {
+  const [searchInput, onChangeSearchInput] = React.useState("");
+
   return (
     <View style={styles.container}>
       <View style={styles.search}>
-        <Ionicons name="search-outline" size={26} color="black" />
+        <TouchableOpacity style={styles.action} onPress={() => {}}>
+          <Ionicons name="search-outline" size={26} color="black" />
+        </TouchableOpacity>
 
-        <TextInput style={styles.input} />
+        <TextInput
+          style={styles.input}
+          value={searchInput}
+          onChangeText={onChangeSearchInput}
+          placeholder="Enter code to search..."
+          placeholderTextColor="lightgray"
+          cursorColor="black"
+        />
 
-        <Ionicons name="scan-outline" size={24} color="black" />
+        <TouchableOpacity style={styles.action} onPress={() => {}}>
+          <Ionicons name="scan-outline" size={24} color="black" />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -23,7 +37,6 @@ const styles = StyleSheet.create({
   container: {
     padding: APP_CONSTANTS.APP_SPACING,
   },
-
   search: {
     flexDirection: "row",
     alignItems: "center",
@@ -38,4 +51,5 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     height: "100%",
   },
+  action: { flexShrink: 0 },
 });
