@@ -18,7 +18,7 @@ const SearchBar = () => {
           style={styles.action}
           onPress={() => searchInputRef.current.focus()}
         >
-          <Ionicons name="search-outline" size={26} color="black" />
+          <Ionicons name="search-outline" size={24} color="black" />
         </TouchableOpacity>
 
         <AppTextInput
