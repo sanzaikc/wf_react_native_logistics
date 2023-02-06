@@ -1,5 +1,4 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   useFonts,
   Quicksand_300Light,
@@ -9,10 +8,7 @@ import {
   Quicksand_700Bold,
 } from "@expo-google-fonts/quicksand";
 
-import HomeScreen from "./src/screens/HomeScreen";
-import NotificationScreens from "./src/screens/NotificationScreens";
-
-const Stack = createNativeStackNavigator();
+import RootNavigator from "./src/navigators/RootNavigator";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -29,19 +25,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Home"
-        screenOptions={{
-          headerTitleStyle: { fontFamily: "Quicksand_700Bold" },
-        }}
-      >
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen name="Notification" component={NotificationScreens} />
-      </Stack.Navigator>
+      <RootNavigator />
     </NavigationContainer>
   );
 }

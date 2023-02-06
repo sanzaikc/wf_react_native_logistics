@@ -5,7 +5,7 @@ import { APP_CONSTANTS } from "../common/constants";
 import AppDivider from "../components/shared/AppDivider";
 import GroupedNotifications from "../components/notification/GroupedNotifications";
 
-const NotificationScreens = () => {
+const NotificationScreen = () => {
   const _today = [
     {
       regNo: "reg1021389020",
@@ -72,7 +72,7 @@ const NotificationScreens = () => {
   );
 };
 
-export default NotificationScreens;
+export default NotificationScreen;
 
 const styles = StyleSheet.create({
   container: {
