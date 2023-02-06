@@ -1,8 +1,10 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 import { APP_CONSTANTS } from "../../common/constants";
+
+import AppText from "../shared/AppText";
 
 const UserInfo = () => {
   const navigation = useNavigation();
@@ -15,11 +17,11 @@ const UserInfo = () => {
       />
 
       <View style={styles.userDetailContainer}>
-        <Text style={styles.userName}>Hi, John Doe!</Text>
+        <AppText style={styles.userName}>Hi, John Doe!</AppText>
 
-        <Text style={styles.userSubtitle}>
+        <AppText style={styles.userSubtitle}>
           Lorem ipsum dolor sit amet consectetur.
-        </Text>
+        </AppText>
       </View>
 
       <TouchableOpacity
@@ -77,7 +79,6 @@ const styles = StyleSheet.create({
     marginTop: -5,
   },
   userSubtitle: {
-    fontFamily: "Quicksand_400Regular",
     fontSize: 12,
     color: "gray",
   },

@@ -2,6 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { APP_CONSTANTS } from "../../../common/constants";
 
+import AppText from "../../shared/AppText";
 import PrimaryText from "../../shared/PrimaryText";
 import ShippingInfo from "./ShippingInfo";
 
@@ -12,7 +13,7 @@ export default function RecentShipping() {
         <PrimaryText>Recent Shipping!</PrimaryText>
 
         <TouchableOpacity>
-          <Text style={styles.more}>View More</Text>
+          <AppText style={styles.more}>View More</AppText>
         </TouchableOpacity>
       </View>
 

@@ -1,16 +1,19 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+
 import { APP_CONSTANTS } from "../../common/constants";
+
+import AppText from "../shared/AppText";
 
 const NotificationItem = ({ notification }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.regNo}>{notification.regNo}</Text>
+      <AppText style={styles.regNo}>{notification.regNo}</AppText>
       <View style={styles.contentContainer}>
-        <Text style={styles.content}>
-          <Text style={styles.action}>{notification?.action}</Text> at{" "}
+        <AppText style={styles.content}>
+          <AppText style={styles.action}>{notification?.action}</AppText> at{" "}
           {notification.address}
-          <Text style={styles.date}> {notification.date} </Text>
-        </Text>
+          <AppText style={styles.date}> {notification.date} </AppText>
+        </AppText>
       </View>
     </View>
   );
@@ -24,7 +27,6 @@ const styles = StyleSheet.create({
   },
   regNo: {
     color: "gray",
-    fontFamily: "Quicksand_400Regular",
     fontSize: 12,
     textTransform: "uppercase",
   },
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "baseline",
   },
-  content: { fontFamily: "Quicksand_400Regular", fontSize: 16 },
+  content: { fontSize: 16 },
   action: {
     fontFamily: "Quicksand_600SemiBold",
   },

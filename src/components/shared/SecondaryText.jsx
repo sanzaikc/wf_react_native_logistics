@@ -1,7 +1,9 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet } from "react-native";
+
+import AppText from "./AppText";
 
 const SecondaryText = ({ children }) => {
-  return <Text style={styles.primary}>{children}</Text>;
+  return <AppText style={styles.primary}>{children}</AppText>;
 };
 
 export default SecondaryText;
