@@ -1,32 +1,32 @@
 import React from "react";
-import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import { APP_CONSTANTS } from "../../common/constants";
 
+import AppTextInput from "../shared/AppTextInput";
+
 const SearchBar = () => {
   const [searchInput, onChangeSearchInput] = React.useState("");
 
-  const inputRef = React.useState(null);
+  const searchInputRef = React.useState(null);
 
   return (
     <View style={styles.container}>
       <View style={styles.search}>
         <TouchableOpacity
           style={styles.action}
-          onPress={() => inputRef.current.focus()}
+          onPress={() => searchInputRef.current.focus()}
         >
           <Ionicons name="search-outline" size={26} color="black" />
         </TouchableOpacity>
 
-        <TextInput
+        <AppTextInput
+          ref={searchInputRef}
           style={styles.input}
-          ref={inputRef}
           value={searchInput}
-          onChangeText={onChangeSearchInput}
           placeholder="Enter code to search..."
-          placeholderTextColor="lightgray"
-          cursorColor="black"
+          onChangeText={onChangeSearchInput}
         />
 
         <TouchableOpacity style={styles.action} onPress={() => {}}>
