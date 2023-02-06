@@ -2,8 +2,8 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
 import Constants from "expo-constants";
 
-import QRSearch from "../components/home/QRSearch";
 import RecentShipping from "../components/home/RecentShipping";
+import SearchBar from "../components/home/SearchBar";
 import UserInfo from "../components/home/UserInfo";
 
 const HomeScreen = () => {
@@ -14,7 +14,7 @@ const HomeScreen = () => {
       <ScrollView>
         <UserInfo />
 
-        <QRSearch />
+        <SearchBar />
 
         <RecentShipping />
       </ScrollView>
