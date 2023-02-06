@@ -7,15 +7,21 @@ import { APP_CONSTANTS } from "../../common/constants";
 const SearchBar = () => {
   const [searchInput, onChangeSearchInput] = React.useState("");
 
+  const inputRef = React.useState(null);
+
   return (
     <View style={styles.container}>
       <View style={styles.search}>
-        <TouchableOpacity style={styles.action} onPress={() => {}}>
+        <TouchableOpacity
+          style={styles.action}
+          onPress={() => inputRef.current.focus()}
+        >
           <Ionicons name="search-outline" size={26} color="black" />
         </TouchableOpacity>
 
         <TextInput
           style={styles.input}
+          ref={inputRef}
           value={searchInput}
           onChangeText={onChangeSearchInput}
           placeholder="Enter code to search..."
