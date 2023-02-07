@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "@react-navigation/native";
 import { Dimensions, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -11,9 +12,11 @@ const SearchBar = () => {
 
   const searchInputRef = React.useState(null);
 
+  const { colors } = useTheme();
+
   return (
     <View style={styles.container}>
-      <View style={styles.search}>
+      <View style={[styles.search, { backgroundColor: colors.card }]}>
         <TouchableOpacity
           style={styles.action}
           onPress={() => searchInputRef.current.focus()}
@@ -57,7 +60,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     height: 55,
-    backgroundColor: "#fafafa",
     borderRadius: APP_CONSTANTS.APP_BORDER_RADIUS * 0.5,
   },
   input: {

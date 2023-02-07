@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
+import { useTheme } from "@react-navigation/native";
+import { StyleSheet, View } from "react-native";
 
 import { APP_CONSTANTS } from "../common/constants";
 
@@ -6,6 +7,8 @@ import AppDivider from "../components/shared/AppDivider";
 import GroupedNotifications from "../components/notification/GroupedNotifications";
 
 const NotificationScreen = () => {
+  const { colors } = useTheme();
+
   const _today = [
     {
       regNo: "reg1021389020",
@@ -58,7 +61,7 @@ const NotificationScreen = () => {
   ];
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
       <GroupedNotifications groupLabel="Today" notifications={_today} />
 
       <AppDivider />
