@@ -30,7 +30,7 @@ const SearchBar = () => {
 
         <AppTextInput
           ref={searchInputRef}
-          style={styles.input}
+          style={[styles.input, { color: colors.text }]}
           value={searchInput}
           placeholder="Enter code to search..."
           onChangeText={onChangeSearchInput}
