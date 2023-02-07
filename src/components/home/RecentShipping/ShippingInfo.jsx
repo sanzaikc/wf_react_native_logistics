@@ -8,6 +8,7 @@ import AppText from "../../shared/AppText";
 
 const ShippingInfo = () => {
   const { colors } = useTheme();
+
   return (
     <TouchableOpacity
       style={[styles.container, { backgroundColor: colors.card }]}

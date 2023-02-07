@@ -1,6 +1,6 @@
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useTheme } from "@react-navigation/native";
 
 import { APP_CONSTANTS } from "../../common/constants";
 
@@ -8,6 +8,8 @@ import AppText from "../shared/AppText";
 
 const UserInfo = () => {
   const navigation = useNavigation();
+
+  const { colors } = useTheme();
 
   return (
     <View style={styles.container}>
@@ -31,9 +33,14 @@ const UserInfo = () => {
         <Ionicons
           name="md-notifications-outline"
           size={APP_CONSTANTS.APP_ICON_SIZE}
-          color="black"
+          color={colors.text}
         />
-        <View style={styles.notificationIndicator} />
+        <View
+          style={[
+            styles.notificationIndicator,
+            { backgroundColor: colors.notification },
+          ]}
+        />
       </TouchableOpacity>
     </View>
   );
@@ -65,7 +72,6 @@ const styles = StyleSheet.create({
   notificationIndicator: {
     height: 8,
     width: 8,
-    backgroundColor: "red",
     borderRadius: 10 / 2,
     position: "absolute",
     right: "30%",

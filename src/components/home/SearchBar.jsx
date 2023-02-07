@@ -24,7 +24,7 @@ const SearchBar = () => {
           <Ionicons
             name="search-outline"
             size={APP_CONSTANTS.APP_ICON_SIZE}
-            color="black"
+            color={colors.text}
           />
         </TouchableOpacity>
 
@@ -40,7 +40,7 @@ const SearchBar = () => {
           <Ionicons
             name="scan-outline"
             size={APP_CONSTANTS.APP_ICON_SIZE}
-            color="black"
+            color={colors.text}
           />
         </TouchableOpacity>
       </View>

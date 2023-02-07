@@ -9,7 +9,7 @@ const NotificationItem = ({ notification }) => {
     <View style={styles.container}>
       <AppText style={styles.regNo}>{notification.regNo}</AppText>
       <View style={styles.contentContainer}>
-        <AppText style={styles.content}>
+        <AppText style={[styles.content]}>
           <AppText style={styles.action}>{notification?.action}</AppText> at{" "}
           {notification.address}
           <AppText style={styles.date}> {notification.date} </AppText>
