@@ -1,4 +1,5 @@
 export const APP_CONSTANTS = {
   APP_BORDER_RADIUS: 20,
   APP_SPACING: 14,
+  APP_ICON_SIZE: 24,
 };

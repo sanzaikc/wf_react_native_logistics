@@ -28,7 +28,11 @@ const UserInfo = () => {
         style={styles.notification}
         onPress={() => navigation.navigate("Notification")}
       >
-        <Ionicons name="md-notifications-outline" size={24} color="black" />
+        <Ionicons
+          name="md-notifications-outline"
+          size={APP_CONSTANTS.APP_ICON_SIZE}
+          color="black"
+        />
         <View style={styles.notificationIndicator} />
       </TouchableOpacity>
     </View>

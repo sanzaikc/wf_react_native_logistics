@@ -18,7 +18,11 @@ const SearchBar = () => {
           style={styles.action}
           onPress={() => searchInputRef.current.focus()}
         >
-          <Ionicons name="search-outline" size={24} color="black" />
+          <Ionicons
+            name="search-outline"
+            size={APP_CONSTANTS.APP_ICON_SIZE}
+            color="black"
+          />
         </TouchableOpacity>
 
         <AppTextInput
@@ -30,7 +34,11 @@ const SearchBar = () => {
         />
 
         <TouchableOpacity style={styles.action} onPress={() => {}}>
-          <Ionicons name="scan-outline" size={24} color="black" />
+          <Ionicons
+            name="scan-outline"
+            size={APP_CONSTANTS.APP_ICON_SIZE}
+            color="black"
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -53,8 +61,11 @@ const styles = StyleSheet.create({
     borderRadius: APP_CONSTANTS.APP_BORDER_RADIUS * 0.5,
   },
   input: {
-    width: "70%",
+    flexGrow: 1,
     height: "100%",
+    maxWidth:
+      Dimensions.get("window").width -
+      (APP_CONSTANTS.APP_ICON_SIZE * 2 + APP_CONSTANTS.APP_SPACING * 6),
   },
   action: {
     flexShrink: 0,

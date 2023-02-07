@@ -21,7 +21,11 @@ const ShippingInfo = () => {
           <AppText style={styles.destinationAddress}>Kathmandu</AppText>
         </View>
 
-        <Entypo name="chevron-thin-right" size={18} color="#c6c6c6" />
+        <Entypo
+          name="chevron-thin-right"
+          size={APP_CONSTANTS.APP_ICON_SIZE}
+          color="#c6c6c6"
+        />
 
         <View style={[styles.destinationItem, styles.toDestination]}>
           <AppText style={styles.destinationDate}>20 Dec, 2022</AppText>
