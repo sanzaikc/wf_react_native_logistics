@@ -13,10 +13,12 @@ const UserInfo = () => {
 
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.avatar}
-        source={{ uri: "https://i.pravatar.cc/300" }}
-      />
+      <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
+        <Image
+          style={styles.avatar}
+          source={{ uri: "https://i.pravatar.cc/300" }}
+        />
+      </TouchableOpacity>
 
       <View style={styles.userDetailContainer}>
         <AppText style={styles.userName}>Hi, Ramesh!</AppText>

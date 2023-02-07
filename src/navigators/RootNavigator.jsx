@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import HomeScreen from "../screens/HomeScreen";
 import NotificationScreen from "../screens/NotificationScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 
 const RootStack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ const RootNavigator = () => {
         options={{ headerShown: false }}
       />
       <RootStack.Screen name="Notification" component={NotificationScreen} />
+      <RootStack.Screen name="Profile" component={ProfileScreen} />
     </RootStack.Navigator>
   );
 };
