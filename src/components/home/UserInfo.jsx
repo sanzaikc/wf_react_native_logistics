@@ -17,7 +17,7 @@ const UserInfo = () => {
       />
 
       <View style={styles.userDetailContainer}>
-        <AppText style={styles.userName}>Hi, John Doe!</AppText>
+        <AppText style={styles.userName}>Hi, Ramesh!</AppText>
 
         <AppText style={styles.userSubtitle}>
           Lorem ipsum dolor sit amet consectetur.
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
   userName: {
     fontFamily: "Quicksand_700Bold",
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: "500",
     marginTop: -5,
   },

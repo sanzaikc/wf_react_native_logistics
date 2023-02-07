@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { Dimensions, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import { APP_CONSTANTS } from "../../common/constants";
@@ -44,18 +44,20 @@ const styles = StyleSheet.create({
     padding: APP_CONSTANTS.APP_SPACING,
   },
   search: {
+    flex: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     height: 55,
     backgroundColor: "#fafafa",
     borderRadius: APP_CONSTANTS.APP_BORDER_RADIUS * 0.5,
-    paddingHorizontal: APP_CONSTANTS.APP_SPACING,
   },
   input: {
-    flexGrow: 1,
-    marginHorizontal: 10,
+    width: "70%",
     height: "100%",
   },
-  action: { flexShrink: 0 },
+  action: {
+    flexShrink: 0,
+    marginHorizontal: APP_CONSTANTS.APP_SPACING,
+  },
 });
