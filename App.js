@@ -1,9 +1,4 @@
-import { useColorScheme } from "react-native";
-import {
-  NavigationContainer,
-  DefaultTheme,
-  DarkTheme,
-} from "@react-navigation/native";
+import { NavigationContainer, useTheme } from "@react-navigation/native";
 import {
   useFonts,
   Quicksand_300Light,
@@ -13,12 +8,12 @@ import {
   Quicksand_700Bold,
 } from "@expo-google-fonts/quicksand";
 
-import AppTheme from "./src/theme/AppTheme";
-
 import RootNavigator from "./src/navigators/RootNavigator";
 
+import useAppTheme from "./src/hooks/useAppTheme";
+
 export default function App() {
-  const scheme = useColorScheme();
+  const { theme } = useAppTheme();
 
   let [fontsLoaded] = useFonts({
     Quicksand_300Light,
@@ -32,10 +27,8 @@ export default function App() {
     return null;
   }
 
-  console.log({ DefaultTheme });
-
   return (
-    <NavigationContainer theme={scheme === "dark" ? DarkTheme : AppTheme}>
+    <NavigationContainer theme={theme}>
       <RootNavigator />
     </NavigationContainer>
   );
