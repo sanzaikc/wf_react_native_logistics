@@ -8,7 +8,7 @@ const useAppTheme = () => {
   const scheme = useColorScheme();
 
   const theme = React.useMemo(() => {
-    return scheme !== "dark" ? DarkTheme : AppTheme;
+    return scheme === "dark" ? DarkTheme : AppTheme;
   }, [scheme]);
 
   return { theme };
