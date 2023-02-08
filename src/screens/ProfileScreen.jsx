@@ -3,14 +3,11 @@ import { StyleSheet, View } from "react-native";
 
 import { APP_CONSTANTS } from "../common/constants";
 
-import AppText from "../components/shared/AppText";
 import ToggleTheme from "../components/ToggleTheme";
 
 const ProfileScreen = () => {
   return (
     <View style={styles.container}>
-      <AppText>YOLO</AppText>
-
       <ToggleTheme />
     </View>
   );

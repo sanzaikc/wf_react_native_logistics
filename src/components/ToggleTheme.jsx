@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Switch, View } from "react-native";
+import { StyleSheet, Switch, TouchableOpacity } from "react-native";
 
 import useAppTheme from "../hooks/useAppTheme";
 
@@ -16,7 +16,7 @@ const ToggleTheme = () => {
   const toggleSwitch = () => setAppThemeScheme(isLightTheme ? "dark" : "light");
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={toggleSwitch}>
       <AppText>Toggle Theme: {appThemeScheme}</AppText>
 
       <Switch
@@ -26,7 +26,7 @@ const ToggleTheme = () => {
         onValueChange={toggleSwitch}
         value={isLightTheme}
       />
-    </View>
+    </TouchableOpacity>
   );
 };
 
