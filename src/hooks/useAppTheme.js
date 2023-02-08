@@ -1,5 +1,5 @@
 import React from "react";
-import { Appearance, useColorScheme } from "react-native";
+import { useColorScheme } from "react-native";
 import { DarkTheme } from "@react-navigation/native";
 
 import AppTheme from "../theme/AppTheme";
