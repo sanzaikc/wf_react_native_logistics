@@ -15,7 +15,9 @@ const useAppTheme = () => {
 
   React.useEffect(() => {
     if (!deviceColorScheme) return;
+
     setAppThemeScheme(deviceColorScheme);
+
     return () => {
       setAppThemeScheme("light");
     };
