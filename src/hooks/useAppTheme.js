@@ -1,17 +1,27 @@
 import React from "react";
-import { useColorScheme } from "react-native";
+import { Appearance, useColorScheme } from "react-native";
 import { DarkTheme } from "@react-navigation/native";
 
 import AppTheme from "../theme/AppTheme";
 
 const useAppTheme = () => {
-  const scheme = useColorScheme();
+  const [appThemeScheme, setAppThemeScheme] = React.useState("light");
 
-  const theme = React.useMemo(() => {
-    return scheme === "dark" ? DarkTheme : AppTheme;
-  }, [scheme]);
+  const deviceColorScheme = useColorScheme();
 
-  return { theme };
+  const appTheme = React.useMemo(() => {
+    return appThemeScheme === "dark" ? DarkTheme : AppTheme;
+  }, [appThemeScheme]);
+
+  React.useEffect(() => {
+    if (!deviceColorScheme) return;
+    setAppThemeScheme(deviceColorScheme);
+    return () => {
+      setAppThemeScheme("light");
+    };
+  }, [deviceColorScheme]);
+
+  return { appTheme, setAppThemeScheme };
 };
 
 export default useAppTheme;

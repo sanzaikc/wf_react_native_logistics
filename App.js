@@ -13,7 +13,7 @@ import RootNavigator from "./src/navigators/RootNavigator";
 import useAppTheme from "./src/hooks/useAppTheme";
 
 export default function App() {
-  const { theme } = useAppTheme();
+  const { appTheme } = useAppTheme();
 
   let [fontsLoaded] = useFonts({
     Quicksand_300Light,
@@ -28,7 +28,7 @@ export default function App() {
   }
 
   return (
-    <NavigationContainer theme={theme}>
+    <NavigationContainer theme={appTheme}>
       <RootNavigator />
     </NavigationContainer>
   );
