@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Switch, TouchableOpacity } from "react-native";
+import { StyleSheet, Switch, TouchableOpacity, View } from "react-native";
 
 import useAppTheme from "../hooks/useAppTheme";
 
@@ -17,15 +17,19 @@ const ToggleTheme = () => {
 
   return (
     <TouchableOpacity style={styles.container} onPress={toggleSwitch}>
-      <AppText>Toggle Theme: {appThemeScheme}</AppText>
+      <AppText>Toggle Theme</AppText>
 
-      <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        // thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isLightTheme}
-      />
+      <View style={styles.switch}>
+        <AppText style={styles.switchLabel}>{appThemeScheme}</AppText>
+
+        <Switch
+          trackColor={{ false: "#767577", true: "#81b0ff" }}
+          // thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+          ios_backgroundColor="#3e3e3e"
+          onValueChange={toggleSwitch}
+          value={!isLightTheme}
+        />
+      </View>
     </TouchableOpacity>
   );
 };
@@ -37,5 +41,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+  },
+  switch: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  switchLabel: {
+    textTransform: "capitalize",
   },
 });
