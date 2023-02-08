@@ -23,7 +23,7 @@ const useAppTheme = () => {
     };
   }, [deviceColorScheme]);
 
-  return { appTheme, setAppThemeScheme };
+  return { appTheme, appThemeScheme, setAppThemeScheme };
 };
 
 export default useAppTheme;
