@@ -9,9 +9,10 @@ const useAppTheme = () => {
 
   const deviceColorScheme = useColorScheme();
 
-  const appTheme = React.useMemo(() => {
-    return appThemeScheme === "dark" ? DarkTheme : AppTheme;
-  }, [appThemeScheme]);
+  const appTheme = React.useMemo(
+    () => (appThemeScheme === "dark" ? DarkTheme : AppTheme),
+    [appThemeScheme]
+  );
 
   React.useEffect(() => {
     if (!deviceColorScheme) return;
