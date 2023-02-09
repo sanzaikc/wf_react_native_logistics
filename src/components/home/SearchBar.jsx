@@ -3,7 +3,7 @@ import { useTheme } from "@react-navigation/native";
 import { Dimensions, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import { APP_CONSTANTS } from "../../common/constants";
+import { APP_CONSTANTS } from "../../constants/appConstants";
 
 import AppTextInput from "../shared/AppTextInput";
 

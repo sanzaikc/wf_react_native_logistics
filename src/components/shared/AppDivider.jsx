@@ -1,7 +1,7 @@
 import { useTheme } from "@react-navigation/native";
 import { StyleSheet, View } from "react-native";
 
-import { APP_CONSTANTS } from "../../common/constants";
+import { APP_CONSTANTS } from "../../constants/appConstants";
 
 const AppDivider = () => {
   const { colors } = useTheme();

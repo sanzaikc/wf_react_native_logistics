@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 
-import { APP_CONSTANTS } from "../../common/constants";
+import { APP_CONSTANTS } from "../../constants/appConstants";
 
 import NotificationItem from "./NotificationItem";
 import SecondaryText from "../shared/SecondaryText";

@@ -1,7 +1,7 @@
 import { useTheme } from "@react-navigation/native";
 import { StyleSheet, View } from "react-native";
 
-import { APP_CONSTANTS } from "../common/constants";
+import { APP_CONSTANTS } from "../constants/appConstants";
 
 import AppDivider from "../components/shared/AppDivider";
 import GroupedNotifications from "../components/notification/GroupedNotifications";

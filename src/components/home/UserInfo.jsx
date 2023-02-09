@@ -2,7 +2,7 @@ import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, useTheme } from "@react-navigation/native";
 
-import { APP_CONSTANTS } from "../../common/constants";
+import { APP_CONSTANTS } from "../../constants/appConstants";
 
 import AppText from "../shared/AppText";
 
