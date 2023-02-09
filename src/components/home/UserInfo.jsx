@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, useTheme } from "@react-navigation/native";
 
 import { APP_CONSTANTS } from "../../constants/appConstants";
+import { NAVIGATION_CONSTANTS } from "../../constants/navigationConstants";
 
 import AppText from "../shared/AppText";
 
@@ -13,7 +14,9 @@ const UserInfo = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate(NAVIGATION_CONSTANTS.PROFILE)}
+      >
         <Image
           style={styles.avatar}
           source={{ uri: "https://i.pravatar.cc/300" }}
@@ -30,7 +33,7 @@ const UserInfo = () => {
 
       <TouchableOpacity
         style={styles.notification}
-        onPress={() => navigation.navigate("Notification")}
+        onPress={() => navigation.navigate(NAVIGATION_CONSTANTS.NOTIFICATION)}
       >
         <Ionicons
           name="md-notifications-outline"
