@@ -24,7 +24,7 @@ const UserInfo = () => {
       </TouchableOpacity>
 
       <View style={styles.userDetailContainer}>
-        <AppText style={styles.userName}>Hi, Ramesh!</AppText>
+        <AppText style={styles.userName}>Hi, Username!</AppText>
 
         <AppText style={styles.userSubtitle}>
           Lorem ipsum dolor sit amet consectetur.
