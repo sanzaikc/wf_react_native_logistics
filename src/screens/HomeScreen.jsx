@@ -1,19 +1,15 @@
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
-import { useTheme } from "@react-navigation/native";
+import { ScrollView, StyleSheet } from "react-native";
 import Constants from "expo-constants";
 
 import RecentShipping from "../components/home/RecentShipping";
 import SearchBar from "../components/home/SearchBar";
 import UserInfo from "../components/home/UserInfo";
+import AppView from "../components/shared/AppView";
 
 const HomeScreen = () => {
-  const { colors } = useTheme();
-
   return (
-    <SafeAreaView
-      style={[styles.container, { backgroundColor: colors.background }]}
-    >
+    <AppView style={styles.container}>
       <StatusBar auto />
 
       <ScrollView>
@@ -23,7 +19,7 @@ const HomeScreen = () => {
 
         <RecentShipping />
       </ScrollView>
-    </SafeAreaView>
+    </AppView>
   );
 };
 
@@ -31,8 +27,6 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    // backgroundColor: "#fff",
     paddingTop: Constants.statusBarHeight,
   },
 });

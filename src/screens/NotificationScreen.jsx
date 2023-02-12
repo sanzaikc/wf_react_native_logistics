@@ -1,14 +1,12 @@
-import { useTheme } from "@react-navigation/native";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
+
+import AppDivider from "../components/shared/AppDivider";
+import AppView from "../components/shared/AppView";
+import GroupedNotifications from "../components/notification/GroupedNotifications";
 
 import { APP_CONSTANTS } from "../constants/appConstants";
 
-import AppDivider from "../components/shared/AppDivider";
-import GroupedNotifications from "../components/notification/GroupedNotifications";
-
 const NotificationScreen = () => {
-  const { colors } = useTheme();
-
   const _today = [
     {
       regNo: "reg1021389020",
@@ -61,7 +59,7 @@ const NotificationScreen = () => {
   ];
 
   return (
-    <View style={[styles.container, { backgroundColor: colors.background }]}>
+    <AppView style={styles.container}>
       <GroupedNotifications groupLabel="Today" notifications={_today} />
 
       <AppDivider />
@@ -71,7 +69,7 @@ const NotificationScreen = () => {
       <AppDivider />
 
       <GroupedNotifications groupLabel="This Week" notifications={_thisWeek} />
-    </View>
+    </AppView>
   );
 };
 
@@ -79,8 +77,6 @@ export default NotificationScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
     padding: APP_CONSTANTS.APP_SPACING,
   },
 });
