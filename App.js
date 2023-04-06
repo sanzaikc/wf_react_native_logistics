@@ -27,6 +27,8 @@ export default function App() {
     return null;
   }
 
+  console.log({ appTheme });
+
   return (
     <NavigationContainer theme={appTheme}>
       <RootNavigator />

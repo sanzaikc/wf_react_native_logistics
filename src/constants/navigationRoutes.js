@@ -1,4 +1,4 @@
-export const NAVIGATION_CONSTANTS = {
+export const NAVIGATION_ROUTES = {
   HOME: "Home",
   PROFILE: "Profile",
   NOTIFICATION: "Notification",

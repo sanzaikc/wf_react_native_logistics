@@ -3,7 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, useTheme } from "@react-navigation/native";
 
 import { APP_CONSTANTS } from "../../constants/appConstants";
-import { NAVIGATION_CONSTANTS } from "../../constants/navigationConstants";
+import { NAVIGATION_ROUTES } from "../../constants/navigationRoutes";
 
 import AppText from "../shared/AppText";
 
@@ -15,7 +15,7 @@ const UserInfo = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        onPress={() => navigation.navigate(NAVIGATION_CONSTANTS.PROFILE)}
+        onPress={() => navigation.navigate(NAVIGATION_ROUTES.PROFILE)}
       >
         <Image
           style={styles.avatar}
@@ -33,7 +33,7 @@ const UserInfo = () => {
 
       <TouchableOpacity
         style={styles.notification}
-        onPress={() => navigation.navigate(NAVIGATION_CONSTANTS.NOTIFICATION)}
+        onPress={() => navigation.navigate(NAVIGATION_ROUTES.NOTIFICATION)}
       >
         <Ionicons
           name="md-notifications-outline"

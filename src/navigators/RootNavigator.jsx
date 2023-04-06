@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { NAVIGATION_CONSTANTS } from "../constants/navigationConstants";
+import { NAVIGATION_ROUTES } from "../constants/navigationRoutes";
 
 import HomeScreen from "../screens/HomeScreen";
 import NotificationScreen from "../screens/NotificationScreen";
@@ -17,16 +17,16 @@ const RootNavigator = () => {
       }}
     >
       <RootStack.Screen
-        name={NAVIGATION_CONSTANTS.HOME}
+        name={NAVIGATION_ROUTES.HOME}
         component={HomeScreen}
         options={{ headerShown: false }}
       />
       <RootStack.Screen
-        name={NAVIGATION_CONSTANTS.NOTIFICATION}
+        name={NAVIGATION_ROUTES.NOTIFICATION}
         component={NotificationScreen}
       />
       <RootStack.Screen
-        name={NAVIGATION_CONSTANTS.PROFILE}
+        name={NAVIGATION_ROUTES.PROFILE}
         component={ProfileScreen}
       />
     </RootStack.Navigator>
