@@ -1,13 +1,14 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 import AppText from "../components/shared/AppText";
+import AppView from "../components/shared/AppView";
 
 const ShippingDetailScreen = () => {
   return (
-    <View>
+    <AppView>
       <AppText>ShippingDetailScreen</AppText>
-    </View>
+    </AppView>
   );
 };
 
