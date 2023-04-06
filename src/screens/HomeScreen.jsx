@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet } from "react-native";
 import Constants from "expo-constants";
 
 import AppView from "../components/shared/AppView";
-import RecentShipping from "../components/home/RecentShipping/RecentShipping";
+import RecentShipping from "../components/home/recentShipping/RecentShipping";
 import SearchBar from "../components/home/SearchBar";
 import UserInfo from "../components/home/UserInfo";
 
