@@ -1,4 +1,5 @@
 import { StyleSheet, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import { useTheme } from "@react-navigation/native";
 
 const AppView = ({ children, ...props }) => {
@@ -11,6 +12,7 @@ const AppView = ({ children, ...props }) => {
       style={[style, styles.container, { backgroundColor: colors.background }]}
       {...otherProps}
     >
+      <StatusBar auto />
       {children}
     </View>
   );

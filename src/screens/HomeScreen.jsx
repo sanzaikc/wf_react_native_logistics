@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { ScrollView, StyleSheet } from "react-native";
 import Constants from "expo-constants";
 
@@ -10,8 +9,6 @@ import UserInfo from "../components/home/UserInfo";
 const HomeScreen = () => {
   return (
     <AppView style={styles.container}>
-      <StatusBar auto />
-
       <ScrollView>
         <UserInfo />
 
