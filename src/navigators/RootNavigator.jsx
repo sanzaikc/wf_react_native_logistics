@@ -6,6 +6,7 @@ import { NAVIGATION_ROUTES } from "../constants/navigationRoutes";
 import HomeScreen from "../screens/HomeScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import ShippingDetailScreen from "../screens/ShippingDetailScreen";
 
 const RootStack = createNativeStackNavigator();
 
@@ -29,6 +30,10 @@ const RootNavigator = () => {
       <RootStack.Screen
         name={NAVIGATION_ROUTES.PROFILE}
         component={ProfileScreen}
+      />
+      <RootStack.Screen
+        name={NAVIGATION_ROUTES.SHIPPING_DETAIL}
+        component={ShippingDetailScreen}
       />
     </RootStack.Navigator>
   );

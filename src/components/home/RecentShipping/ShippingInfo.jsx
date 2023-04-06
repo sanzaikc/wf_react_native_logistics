@@ -1,17 +1,21 @@
-import { useTheme } from "@react-navigation/native";
+import { useNavigation, useTheme } from "@react-navigation/native";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
 import { APP_CONSTANTS } from "../../../constants/appConstants";
+import { NAVIGATION_ROUTES } from "../../../constants/navigationRoutes";
 
 import AppText from "../../shared/AppText";
 
 const ShippingInfo = () => {
   const { colors } = useTheme();
 
+  const navigator = useNavigation();
+
   return (
     <TouchableOpacity
       style={[styles.container, { backgroundColor: colors.card }]}
+      onPress={() => navigator.navigate(NAVIGATION_ROUTES.SHIPPING_DETAIL)}
     >
       <View style={styles.header}>
         <AppText style={styles.regNo}>Reg123456789</AppText>
