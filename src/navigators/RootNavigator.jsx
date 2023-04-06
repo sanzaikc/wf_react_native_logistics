@@ -16,6 +16,7 @@ const RootNavigator = () => {
       initialRouteName={NAVIGATION_ROUTES.HOME}
       screenOptions={{
         headerTitleStyle: { fontFamily: APP_FONT_WEIGHTS.BOLD },
+        headerTitleAlign: "center",
       }}
     >
       <RootStack.Screen
