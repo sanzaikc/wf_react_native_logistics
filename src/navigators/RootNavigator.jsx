@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import { APP_FONT_WEIGHTS } from "../constants/appConstants";
 import { NAVIGATION_ROUTES } from "../constants/navigationRoutes";
 
 import HomeScreen from "../screens/HomeScreen";
@@ -11,9 +12,9 @@ const RootStack = createNativeStackNavigator();
 const RootNavigator = () => {
   return (
     <RootStack.Navigator
-      initialRouteName="Home"
+      initialRouteName={NAVIGATION_ROUTES.HOME}
       screenOptions={{
-        headerTitleStyle: { fontFamily: "Quicksand_700Bold" },
+        headerTitleStyle: { fontFamily: APP_FONT_WEIGHTS.BOLD },
       }}
     >
       <RootStack.Screen
